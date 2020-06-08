@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ThingViewDemo.EditItem"
+         projectName="ThingViewDemo"
+         rows="0.0"
+         tags="Applications:ThingViewDemo">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 aspect.ordinal="0"
+                 baseType="STRING"
+                 description=""
+                 name="model_Id"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>ThingViewDemoAppHelper</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_ThingViewDemoAppHelper" : {
+                  "DataName" : "Things_ThingViewDemoAppHelper",
+                  "EntityName" : "ThingViewDemoAppHelper",
+                  "EntityType" : "Things",
+                  "Id" : "1dbe93d6-9a0c-4c2e-843a-ce5eb4c18d6c",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "71d1faec-b367-40e7-9d35-97ae105da16b",
+                    "Name" : "GetItemById",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetItemById"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "c2cb6697-dff8-4db9-93ea-816fa8caa484",
+                    "Name" : "EditItem",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "EditItem"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "9ff6fa6c-8c4b-49ca-9dc8-25fbbbba8546",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "model_Id",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "model_Id",
+                  "TargetPropertyBaseType" : "GUID",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetItemById",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "c820923c-7129-4527-aa96-9516e503c638",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "model_Description",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetItemById",
+                "SourceSection" : "Things_ThingViewDemoAppHelper",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstextarea-12",
+                "TargetSection" : ""
+              }, {
+                "Id" : "34fc670f-a32b-4275-b2c4-be00d13502ba",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "model_Description",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "ptcstextarea-12",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "7aca3d1a-954c-4b08-abb0-eaff73eea639",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "RepositoryName",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "repositoryName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "fileupload-9",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "943fa002-efa3-429b-b4a7-a6ff06741d35",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Path",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "path",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "fileupload-9",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "92cce13f-5088-4d75-a37d-0d5fad7226d9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FileName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "fileName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "fileupload-9",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "5b0a71df-a54e-4a4c-9173-ff8efb9277b9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "FileName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "pictureFileName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "fileupload-14",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "a49644b8-b6fe-4ac2-8ce4-375e1c684772",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Path",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "pictureRepoPathName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "fileupload-14",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "242f2dc7-92a3-4e97-b8b7-4df39ca58210",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "model_Id",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "model_Id",
+                  "TargetPropertyBaseType" : "GUID",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditItem",
+                "TargetSection" : "Things_ThingViewDemoAppHelper"
+              }, {
+                "Id" : "27067384-306d-4950-9b07-5744a041eec1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "model_Name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "model_Name",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetItemById",
+                "SourceSection" : "Things_ThingViewDemoAppHelper",
+                "TargetArea" : "UI",
+                "TargetId" : "expression-21",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-10",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "UploadComplete",
+                "EventTriggerId" : "fileupload-9",
+                "EventTriggerSection" : "",
+                "Id" : "82df2914-86f0-4793-9915-a8ad780b06b0"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-11",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "UploadFailed",
+                "EventTriggerId" : "fileupload-9",
+                "EventTriggerSection" : "",
+                "Id" : "880f44f0-483b-455b-b469-f40f24d5e831"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-10",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "UploadComplete",
+                "EventTriggerId" : "fileupload-14",
+                "EventTriggerSection" : "",
+                "Id" : "4ed28f45-5dad-49ae-ba10-82e5d592d8f5"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-11",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "UploadFailed",
+                "EventTriggerId" : "fileupload-14",
+                "EventTriggerSection" : "",
+                "Id" : "24b9aad3-8442-4514-8248-75de61ea3e2b"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ThingViewDemoAppHelper",
+                "EventHandlerService" : "GetItemById",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "4fcb5505-a30c-478e-be2f-e43927f93ede"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ThingViewDemoAppHelper",
+                "EventHandlerService" : "EditItem",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "ptcsbutton-5",
+                "EventTriggerSection" : "",
+                "Id" : "5eb3f9da-29a9-4770-a91a-4e58e841e250"
+              }, {
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "EditItem",
+                "EventTriggerSection" : "Things_ThingViewDemoAppHelper",
+                "Id" : "cb07c7c6-416d-4cc4-aab0-ef9792af62c9"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression-21",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetItemById",
+                "EventTriggerSection" : "Things_ThingViewDemoAppHelper",
+                "Id" : "037ca28a-8239-4775-adf7-90bb06d5dc7c"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "ptcsbutton-5" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#2e8a2f",
+                              "border-color" : "#2e8a2f",
+                              "border-radius" : "16px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-button"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTS.Niko.DefaultTheme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "model_Id"
+                  } ],
+                  "id_index" : 35,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : "1",
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : "1",
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "isLocked" : true,
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisclosureControl" : "show-more",
+                      "DisplayName" : "ptcs-label-13",
+                      "HorizontalAlignment" : "left",
+                      "Id" : "ptcslabel-13",
+                      "LabelText" : "Выберите файл PVZ для выгрузки на сервер",
+                      "LabelType" : "label",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "25 5 5 25",
+                      "MultiLine" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Top" : 0,
+                      "Type" : "ptcslabel",
+                      "UseTheme" : true,
+                      "VerticalAlignment" : "flex-start",
+                      "Visible" : true,
+                      "Width" : 347,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label",
+                      "isLocked" : false,
+                      "overflowShowLessTxt" : "[[showLess]]",
+                      "overflowShowMoreTxt" : "[[showMore]]"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowedFileTypes" : ".pvz",
+                      "Area" : "UI",
+                      "DisplayName" : "fileupload-9",
+                      "DisplayPathTextBox" : false,
+                      "DisplayRepositorySelector" : false,
+                      "FileName" : "",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "FullPath" : "",
+                      "Height" : 40,
+                      "Id" : "fileupload-9",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "5 5 5 25",
+                      "Path" : "/models",
+                      "RepositoryName" : "ThingViewDemoRepository",
+                      "RepositoryStyle" : "DefaultRepositoryStyle",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultFileUploadStyle",
+                      "TabSequence" : 0,
+                      "Top" : 0,
+                      "Type" : "fileupload",
+                      "Visible" : true,
+                      "Width" : 302,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "File Upload",
+                      "isLocked" : false
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisclosureControl" : "show-more",
+                      "DisplayName" : "ptcslabel-15",
+                      "HorizontalAlignment" : "left",
+                      "Id" : "ptcslabel-15",
+                      "LabelText" : "Выберите картинку для выгрузки на сервер",
+                      "LabelType" : "label",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "45 5 5 25",
+                      "MultiLine" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Top" : 0,
+                      "Type" : "ptcslabel",
+                      "UseTheme" : true,
+                      "VerticalAlignment" : "flex-start",
+                      "Visible" : true,
+                      "Width" : 347,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label",
+                      "isLocked" : false,
+                      "overflowShowLessTxt" : "[[showLess]]",
+                      "overflowShowMoreTxt" : "[[showMore]]"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AllowedFileTypes" : "",
+                      "Area" : "UI",
+                      "DisplayName" : "fileupload-14",
+                      "DisplayPathTextBox" : false,
+                      "DisplayRepositorySelector" : false,
+                      "FileName" : "",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "FullPath" : "",
+                      "Height" : 40,
+                      "Id" : "fileupload-14",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "5 5 5 25",
+                      "Path" : "/pictures",
+                      "RepositoryName" : "ThingViewDemoRepository",
+                      "RepositoryStyle" : "DefaultRepositoryStyle",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultFileUploadStyle",
+                      "TabSequence" : 0,
+                      "Top" : 0,
+                      "Type" : "fileupload",
+                      "Visible" : true,
+                      "Width" : 302,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "File Upload",
+                      "isLocked" : false
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "Counter" : false,
+                      "Disabled" : false,
+                      "DisplayName" : "ptcs-textarea-12",
+                      "HasText" : false,
+                      "Id" : "ptcstextarea-12",
+                      "Label" : "Описание",
+                      "LabelAlignment" : "left",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "45 5 5 25",
+                      "MaxNumberOfCharacters" : 1000000,
+                      "ReadOnly" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "TabSequence" : 0,
+                      "TextAlignment" : "left",
+                      "Top" : 0,
+                      "Type" : "ptcstextarea",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Width" : 303,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Text Area",
+                      "isLocked" : false
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "ButtonType" : "primary",
+                      "ContextID" : "",
+                      "Disabled" : false,
+                      "DisplayName" : "ptcs-button-5",
+                      "Id" : "ptcsbutton-5",
+                      "Label" : "Сохранить",
+                      "LabelAlignment" : "center",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "25",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "TabSequence" : 0,
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Type" : "ptcsbutton",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Width" : 126,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Button",
+                      "__supportsTooltip" : true,
+                      "isLocked" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "fileUploaded",
+                    "Height" : 28,
+                    "Id" : "statusmessage-10",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Message" : "Файл успешно выгружен на сервер",
+                    "MessageType" : "info",
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "statusmessage",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Status Message"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "fileUploadedError",
+                    "Height" : 28,
+                    "Id" : "statusmessage-11",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Message" : "При выгрузке файла на сервер произошла ошибка",
+                    "MessageType" : "error",
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "statusmessage",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Status Message"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DataChangeType" : "VALUE",
+                    "DisplayName" : "fileNameParser",
+                    "Expression" : "arrStr = model_Name.split(\"/\");\nresult = arrStr[arrStr.length - 1];\n",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression-21",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "OutputBaseType" : "STRING",
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "model_Name",
+                      "bindingDirection" : "Target",
+                      "bindingStatus" : true,
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "name" : "model_Name"
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

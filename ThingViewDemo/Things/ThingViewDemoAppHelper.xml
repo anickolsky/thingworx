@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         name="ThingViewDemoAppHelper"
+         projectName="ThingViewDemo"
+         published="false"
+         tags="Applications:ThingViewDemo"
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="appVersion"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AddItem">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="fileName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="model_Description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="path"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="pictureFileName"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="pictureRepoPathName"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="repositoryName"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DeleteItems">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="model_Id"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="EditItem">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="fileName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="model_Description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="GUID"
+                             description=""
+                             name="model_Id"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="path"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="pictureFileName"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="pictureRepoPathName"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="repositoryName"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetItemById">
+                        <ResultType
+                         aspect.dataShape="ThingViewDemoItemDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="GUID"
+                             description=""
+                             name="model_Id"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetItems">
+                        <ResultType
+                         aspect.dataShape="ThingViewDemoItemDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="AddItem">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var modelFilePath="/Thingworx/FileRepositories/"+ repositoryName + path + "/" + fileName;
+                                        var pictureFilePath="/Thingworx/FileRepositories/"+ repositoryName + pictureRepoPathName + "/" + pictureFileName;
+                                        var params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "ThingViewDemoItemDataShape"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ThingViewDemoItemDataShape)
+                                        var values = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        // ThingViewDemoItemDataShape entry object
+                                        var newEntry = new Object();
+                                        newEntry.model_Name = modelFilePath; // STRING
+                                        newEntry.model_Description = model_Description; // STRING
+                                        newEntry.model_Id =  generateGUID();
+                                        newEntry.model_Image = pictureFilePath; // IMAGELINK
+                                        values.AddRow(newEntry);
+                                        
+                                        var result;
+                                        // id: STRING
+                                        var id =  Things["ThingViewDemoItemsDataTable"].AddDataTableEntry({
+                                        	sourceType: undefined /* STRING */,
+                                        	values: values /* INFOTABLE */,
+                                        	location: undefined /* LOCATION */,
+                                        	source: undefined /* STRING */,
+                                        	tags: undefined /* TAGS */
+                                        });
+                                        
+                                        if (id !== null) {
+                                             result = "Item succesefuly created";
+                                        }
+                                        	else {
+                                               result = "Error occured during item creation";
+                                            }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="DeleteItems">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                        <FieldDefinition
+                                         baseType="JSON"
+                                         description=""
+                                         name="editorSettings"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "ThingViewDemoItemDataShape"
+                                        };
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ThingViewDemoItemDataShape)
+                                        var values = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        values.AddRow({ model_Id: model_Id });
+                                        
+                                        
+                                        Things["ThingViewDemoItemsDataTable"].DeleteDataTableEntries({
+                                        	maxItems: undefined /* NUMBER */,
+                                            values: values /* INFOTABLE */
+                                        });
+                                        ]]>
+                                        </code>
+                                        <editorSettings>
+                                            <json>
+                                            <![CDATA[
+                                            {"viewState":{"viewState":{"firstPositionDeltaTop":0,"scrollLeft":0,"firstPosition":{"column":1,"lineNumber":1}},"cursorState":[{"inSelectionMode":false,"selectionStart":{"column":63,"lineNumber":12},"position":{"column":63,"lineNumber":12}}],"contributionsState":{"editor.contrib.wordHighlighter":false,"editor.contrib.folding":{"provider":"indent","lineCount":15}}}}
+                                            ]]>
+                                            </json>
+                                        </editorSettings>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="EditItem">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                        <FieldDefinition
+                                         baseType="JSON"
+                                         description=""
+                                         name="editorSettings"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var modelFilePath="/Thingworx/FileRepositories/"+ repositoryName + path + "/" + fileName;
+                                        var pictureFilePath="/Thingworx/FileRepositories/"+ repositoryName + pictureRepoPathName + "/" + pictureFileName;
+                                        // values:INFOTABLE(Datashape: ThingViewDemoItemDataShape)
+                                        var values = Things["ThingViewDemoItemsDataTable"].CreateValues();
+                                        
+                                        if(Boolean(fileName)) {
+                                        		values.model_Name = modelFilePath; // STRING
+                                        	}
+                                        if(Boolean(pictureFileName)) {
+                                        		values.model_Image = pictureFilePath; // IMAGELINK
+                                        	}
+                                        values.model_Id = model_Id; // GUID [Primary Key]
+                                        values.model_Description = model_Description; // STRING
+                                        
+                                        var params = {
+                                        	tags : undefined,
+                                        	source : me.name,
+                                        	values : values,
+                                        	location : undefined
+                                        };
+                                        
+                                        // AddOrUpdateDataTableEntry(tags:TAGS, source:STRING("me.name"), values:INFOTABLE(ThingViewDemoItemsDataTable), location:LOCATION):STRING
+                                        var id = Things["ThingViewDemoItemsDataTable"].AddOrUpdateDataTableEntry(params);
+                                        
+                                        if (id !== null) {
+                                             result = "Item succesefuly updates";
+                                        }
+                                        	else {
+                                               result = "Error occured during item update";
+                                            }
+                                        ]]>
+                                        </code>
+                                        <editorSettings>
+                                            <json>
+                                            <![CDATA[
+                                            {"viewState":{"viewState":{"firstPositionDeltaTop":0,"scrollLeft":0,"firstPosition":{"column":1,"lineNumber":1}},"cursorState":[{"inSelectionMode":false,"selectionStart":{"column":30,"lineNumber":12},"position":{"column":30,"lineNumber":12}}],"contributionsState":{"editor.contrib.wordHighlighter":false,"editor.contrib.folding":{"provider":"indent","lineCount":37}}}}
+                                            ]]>
+                                            </json>
+                                        </editorSettings>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetItemById">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                        <FieldDefinition
+                                         baseType="JSON"
+                                         description=""
+                                         name="editorSettings"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ThingViewDemoItemDataShape"
+                                        };
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ThingViewDemoItemDataShape)
+                                        var values = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        values.AddRow({ model_Id: model_Id });
+                                        // result: INFOTABLE dataShape: ""
+                                        var result =  Things["ThingViewDemoItemsDataTable"].GetDataTableEntry({
+                                        	values: values /* INFOTABLE */
+                                        });
+                                        ]]>
+                                        </code>
+                                        <editorSettings>
+                                            <json>
+                                            <![CDATA[
+                                            {"viewState":{"viewState":{"firstPositionDeltaTop":0,"scrollLeft":0,"firstPosition":{"column":1,"lineNumber":1}},"cursorState":[{"inSelectionMode":false,"selectionStart":{"column":4,"lineNumber":12},"position":{"column":4,"lineNumber":12}}],"contributionsState":{"editor.contrib.wordHighlighter":false,"editor.contrib.folding":{"provider":"indent","lineCount":12}}}}
+                                            ]]>
+                                            </json>
+                                        </editorSettings>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetItems">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                        <FieldDefinition
+                                         baseType="JSON"
+                                         description=""
+                                         name="editorSettings"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // result: INFOTABLE dataShape: ""
+                                        var result =  Things["ThingViewDemoItemsDataTable"].QueryDataTableEntries({
+                                        	maxItems: undefined /* NUMBER */,
+                                        	values: undefined /* INFOTABLE */,
+                                        	query: undefined /* QUERY */,
+                                        	source: undefined /* STRING */,
+                                        	tags: undefined /* TAGS */
+                                        });
+                                        ]]>
+                                        </code>
+                                        <editorSettings>
+                                            <json>
+                                            <![CDATA[
+                                            {"viewState":{"viewState":{"firstPositionDeltaTop":0,"scrollLeft":0,"firstPosition":{"column":1,"lineNumber":1}},"cursorState":[{"inSelectionMode":false,"selectionStart":{"column":4,"lineNumber":8},"position":{"column":4,"lineNumber":8}}],"contributionsState":{"editor.contrib.wordHighlighter":false,"editor.contrib.folding":{"provider":"indent","lineCount":8}}}}
+                                            ]]>
+                                            </json>
+                                        </editorSettings>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="appVersion"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <appVersion>
+                    <Value>
+                    <![CDATA[
+                    ModelView, PTS, Версия 1.0.0
+                    ]]>
+                    </Value>
+                    <Timestamp>2020-05-29T22:24:46.336+03:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </appVersion>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
