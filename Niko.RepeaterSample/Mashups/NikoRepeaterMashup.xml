@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b103"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="5"
+ schemaVersion="1054"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="NikoRepeaterMashup"
+         projectName="Niko.RepeaterSample"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates>
+                <ThingTemplate>NikoCameraThingTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_NikoCameraThingTemplate" : {
+                  "DataName" : "ThingTemplates_NikoCameraThingTemplate",
+                  "EntityName" : "NikoCameraThingTemplate",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "43e5526c-a652-403c-a0f0-f87c8f619c4f",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "62502e21-e907-41d8-bb85-0b1665c3cd2c",
+                    "Name" : "GetImplementingThingsWithData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThingsWithData"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "28a6014b-cfd8-4f21-8e32-e91ecfb1a0ea",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_NikoCameraThingTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "collection-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "cfe39aa0-9b89-4253-bf1c-1825784718dd",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Event:camStream",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "camStream",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "collection-5",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-6",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_NikoCameraThingTemplate",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "73f1ff51-7bf3-4029-8796-18805db49adf"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "flexcontainer-4",
+                "EventHandlerService" : "Expand",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "CellWasClicked",
+                "EventTriggerId" : "collection-5",
+                "EventTriggerSection" : "",
+                "Id" : "3669e14a-3b40-4036-bdbf-759d27426f6c"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 6,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "stretch",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : "1",
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : "1",
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-4",
+                      "EnableExpandCollapse" : true,
+                      "Expanded" : false,
+                      "Id" : "flexcontainer-4",
+                      "LastContainer" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : true,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : "1",
+                      "flex-max-height" : "271px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "271px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : "1",
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "mashupcontainer-6",
+                        "Height" : 300,
+                        "Id" : "mashupcontainer-6",
+                        "LastContainer" : false,
+                        "Left" : 0,
+                        "MashupParameters" : [ {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "camStream",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "IN",
+                              "isMandatory" : "false",
+                              "ordinal" : "0"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "camStream",
+                            "ordinal" : 0
+                          }
+                        } ],
+                        "Name" : "NikoActiveCameraMashup",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "TabSequenceGroup" : 0,
+                        "Top" : 0,
+                        "Type" : "mashupcontainer",
+                        "Visible" : true,
+                        "Width" : 1125,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Contained Mashup"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-3",
+                      "EnableExpandCollapse" : false,
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : true,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : "1",
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : "1",
+                      "flex-size" : "default",
+                      "flex-wrap" : "wrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "center",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "AllowSelection" : true,
+                        "AlwaysUseCustomScrollerOniOS" : true,
+                        "Area" : "UI",
+                        "AutoSelectFirstRow" : false,
+                        "BottomPadding" : 22,
+                        "CellActiveStyle" : "DefaultCollectionCellActiveStyle",
+                        "CellBorderRadius" : "20px",
+                        "CellBoxShadow" : "",
+                        "CellHoverStyle" : "DefaultCollectionCellHoverStyle",
+                        "CellMashupSelectedField" : "",
+                        "CellMenuStatesIconGravity" : "Left",
+                        "CellMenuStatesIconSize" : 16,
+                        "CellMenuStatesOrientation" : "Horizontal",
+                        "CellMenuStatesUseBuiltin" : false,
+                        "CellMultipleSelectionType" : "Disabled",
+                        "CellPointer" : "pointer",
+                        "CellSelectedStyle" : "DefaultCollectionCellSelectedStyle",
+                        "CellStyle" : "DefaultCollectionCellStyle",
+                        "DisableWrapping" : false,
+                        "DisplayName" : "collection-5",
+                        "FlowLayoutAlignment" : "Top",
+                        "FlowLayoutContentGravity" : "Center",
+                        "FlowLayoutGravity" : "Spaced",
+                        "FooterHeight" : 6,
+                        "FooterSectionParam" : "",
+                        "HandleSelectionUpdates" : true,
+                        "HasSelectedCells" : false,
+                        "HeaderHeight" : 6,
+                        "HeaderSectionParam" : "",
+                        "Height" : 300,
+                        "Id" : "collection-5",
+                        "ItemLoadBehavior" : "loadUnload",
+                        "LastContainer" : false,
+                        "Left" : 590,
+                        "LeftAlignFinalRow" : true,
+                        "Mashup" : "NikoCameraPropertyPage",
+                        "MashupGlobalPropertyBinding" : "{}",
+                        "MashupHeight" : 200,
+                        "MashupPropertyBinding" : {
+                          "camName" : "camName",
+                          "camNumber" : "camNumber",
+                          "camStream" : "camStream"
+                        },
+                        "MashupWidth" : 230,
+                        "MinimumSpacing" : 0,
+                        "MultiSelect" : false,
+                        "OffScreenBufferFactor" : 0.1,
+                        "PinFootersToBottom" : false,
+                        "PinHeadersToTop" : true,
+                        "PlaysIntroAnimation" : true,
+                        "ResponsiveLayout" : true,
+                        "RippleEffectStyle" : "DefaultCollectionRippleStyle",
+                        "RowSpacing" : 5,
+                        "ScrollbarType" : "hover",
+                        "ScrollsToSelectedCell" : true,
+                        "SectionInsetBottom" : 0,
+                        "SectionInsetLeft" : 0,
+                        "SectionInsetRight" : 0,
+                        "SectionInsetTop" : 0,
+                        "SelectedCellsCount" : 0,
+                        "ShowDataLoading" : true,
+                        "ShowFooters" : false,
+                        "ShowHeaders" : false,
+                        "SortAscending" : false,
+                        "Top" : 45,
+                        "TopPadding" : 6,
+                        "Type" : "collection",
+                        "UIDField" : "name",
+                        "UseCustomScrollerOnWindowsDesktops" : true,
+                        "UseMashupDimensions" : true,
+                        "UseRippleEffect" : true,
+                        "View" : "flow",
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "_CanDoubleClick" : false,
+                        "_EventDataShape" : "{\"isSystemObject\":{\"name\":\"isSystemObject\",\"aspects\":{},\"description\":\"Indicates if a system object or not\",\"baseType\":\"BOOLEAN\",\"ordinal\":1},\"camNumber\":{\"sourceType\":\"Unknown\",\"name\":\"camNumber\",\"aspects\":{\"isPersistent\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"camStream\":{\"sourceType\":\"Unknown\",\"name\":\"camStream\",\"aspects\":{\"isPersistent\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"name\":{\"sourceType\":\"Unknown\",\"name\":\"name\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing name\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"description\":{\"sourceType\":\"Unknown\",\"name\":\"description\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing description\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"ordinal\":0},\"camName\":{\"sourceType\":\"Unknown\",\"name\":\"camName\",\"aspects\":{\"isPersistent\":true,\"dataChangeType\":\"VALUE\",\"cacheTime\":0},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"homeMashup\":{\"name\":\"homeMashup\",\"aspects\":{},\"description\":\"Home mashup\",\"baseType\":\"MASHUPNAME\",\"ordinal\":4},\"avatar\":{\"name\":\"avatar\",\"aspects\":{},\"description\":\"Avatar image\",\"baseType\":\"IMAGELINK\",\"ordinal\":5},\"thingTemplate\":{\"sourceType\":\"Unknown\",\"name\":\"thingTemplate\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Template\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"THINGTEMPLATENAME\",\"ordinal\":0},\"tags\":{\"sourceType\":\"Unknown\",\"name\":\"tags\",\"aspects\":{\"isReadOnly\":true,\"isPersistent\":false,\"tagType\":\"ModelTags\",\"isBuiltIn\":true},\"isLocalOnly\":true,\"description\":\"Thing Tags\",\"sourceName\":\"\",\"category\":\"Metadata\",\"baseType\":\"TAGS\",\"ordinal\":0}}",
+                        "_GlobalDataShape" : "{}",
+                        "_MenuDefinition" : "[]",
+                        "__TypeDisplayName" : "Collection"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
